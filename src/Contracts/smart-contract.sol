@@ -35,6 +35,34 @@ contract ProjectManager is Ownable {
         mapping(address => bool) hasVoted; // Mappa indirizzo a booleano: true se l'utente ha votato
     }
 
+    struct products {
+
+        uint id;
+        string name;
+        uint price;
+        address payable owner;
+        bool purchased;
+
+    }
+
+    event ProductCreated {
+
+        uint id,
+        string name,
+        uint price,
+        address payable owner,
+        bool purchased
+    }
+
+      event ProductPurchased {
+
+        uint id,
+        string name,
+        uint price,
+        address payable owner,
+        bool purchased
+    }
+
     enum Status { Initial, Active, Completed, Cancelled, Approved, Rejected }
 
     // --- 4. Mappature dello Stato Globale ---

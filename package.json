@@ -1,0 +1,22 @@
+{
+  "name": "decentralized-application-dapp-",
+  "version": "1.0.0",
+  "description": "smart-contract ERC20 standard consist of 6 mandatory rules/method:",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emanuele-Antonini/Decentralized-Application-DApp-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emanuele-Antonini/Decentralized-Application-DApp-/issues"
+  },
+  "homepage": "https://github.com/Emanuele-Antonini/Decentralized-Application-DApp-#readme"
+}

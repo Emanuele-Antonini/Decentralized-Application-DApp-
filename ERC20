@@ -1,0 +1,20 @@
+// scripts/deploy.js (esempio per Hardhat)
+async function main() {
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", deployer.address);
+
+    const MySimpleToken = await ethers.getContractFactory("MySimpleToken");
+    const mySimpleToken = await MySimpleToken.deploy();
+
+    await mySimpleToken.deployed();
+
+    console.log("MySimpleToken deployed to:", mySimpleToken.address);
+    console.log("Deployer balance:", (await mySimpleToken.balanceOf(deployer.address)).toString());
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });
